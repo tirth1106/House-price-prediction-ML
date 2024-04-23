@@ -8,6 +8,10 @@ model = pickle.load(open('model.pkl', 'rb'))
 
 @app.route('/')
 def index():
+    return render_template('login.html')
+
+@app.route('/home', methods=['GET', 'POST'])
+def home():
     return render_template('index.html')
 
 
